@@ -94,7 +94,7 @@ namespace CapaNegocio.NegocioFarmacia
         public int consultarInventario(String observaciones, DateTime fecha , int cantidad)
         {
             configuraConexion();
-            conectar.CadenaSQL = String.Format("SELECT id_inventario FROM {0} WHERE observaciones = '{1}' AND fecha = to_char('{2}','dd/mm/yyyy hh24:mi:ss') and cantidad_productos={3}",
+            conectar.CadenaSQL = String.Format("SELECT id_inventario FROM {0} WHERE observaciones = '{1}' AND fecha_inventario = to_char('{2}','dd/mm/yyyy hh24:mi:ss') and cantidad_productos={3}",
                                      conectar.NombreTabla, observaciones,fecha,cantidad);
             conectar.EsSelect = true;
             return conectar.conecta();

@@ -6,3 +6,11 @@ C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Solucio
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Datos\obj\Debug\Capa_Conexion.csprojResolveAssemblyReference.cache
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Datos\obj\Debug\Datos.dll
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Datos\obj\Debug\Datos.pdb
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\bin\Debug\Datos.dll
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\bin\Debug\Datos.pdb
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\bin\Debug\Entidades.dll
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\bin\Debug\Entidades.pdb
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\obj\Debug\Capa_Conexion.csprojResolveAssemblyReference.cache
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\obj\Debug\Datos.dll
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Datos\obj\Debug\Datos.pdb
