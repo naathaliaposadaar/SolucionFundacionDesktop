@@ -216,7 +216,7 @@ namespace AplicacionDesktop.MENU
                                     
                                     if (inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos) == 0)
                                     {
-                                        DialogResult dialogResult = MessageBox.Show("Desea agregarinventario de la medicina: " + cbxProducto.Text, "Información", MessageBoxButtons.YesNo);
+                                        DialogResult dialogResult = MessageBox.Show("Desea agregar inventario de la medicina: " + cbxProducto.Text, "Información", MessageBoxButtons.YesNo);
                                         if (dialogResult == DialogResult.Yes)
                                         {
                                             DialogResult result = MessageBox.Show("Se ingresara el inventario de la medicina ¿desea continuar?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -229,7 +229,7 @@ namespace AplicacionDesktop.MENU
                                                     {
                                                         //obtener id inventario
                                                         auxInventario.Id_inventario = inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos);
-                                                        //obtener id Inventario
+                                                        
                                                         auxBproducto.Id_producto = int.Parse(cbxProducto.SelectedValue.ToString());
                                                         //Obtener cantidad producto
                                                         //?? como obtener cantidad
