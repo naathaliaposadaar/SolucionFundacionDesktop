@@ -1,0 +1,5 @@
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Entidades\bin\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Entidades\bin\Debug\Entidades.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Entidades\obj\Debug\Capa_DTO.csprojResolveAssemblyReference.cache
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Entidades\obj\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\SolucionFundacionDesktop\Entidades\obj\Debug\Entidades.pdb

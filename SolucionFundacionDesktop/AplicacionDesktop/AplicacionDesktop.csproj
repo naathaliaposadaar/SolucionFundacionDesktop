@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00B3F5B7-2EBB-4051-8A65-2625D1EAB955}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AplicacionDesktop</RootNamespace>
+    <AssemblyName>AplicacionDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRUD\EliminarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarInventario.Designer.cs">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\EliminarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarMedicamento.Designer.cs">
+      <DependentUpon>EliminarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\EliminarSolicitudM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarSolicitudM.Designer.cs">
+      <DependentUpon>EliminarSolicitudM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\IngresarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarInventario.Designer.cs">
+      <DependentUpon>IngresarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\IngresarSolicitudMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarSolicitudMedicamentos.Designer.cs">
+      <DependentUpon>IngresarSolicitudMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\IngresarMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarMedicamentos.Designer.cs">
+      <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ListarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ListarMedicamento.Designer.cs">
+      <DependentUpon>ListarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ModificarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ModificarInventario.Designer.cs">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ModificarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ModificarMedicamento.Designer.cs">
+      <DependentUpon>ModificarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdminCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdminCompra.Designer.cs">
+      <DependentUpon>MenuAdminCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdminProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdminProductos.Designer.cs">
+      <DependentUpon>MenuAdminProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdminProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdminProveedor.Designer.cs">
+      <DependentUpon>MenuAdminProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdminSolicitudMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdminSolicitudMedica.Designer.cs">
+      <DependentUpon>MenuAdminSolicitudMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuGenerarReportesG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuGenerarReportesG.Designer.cs">
+      <DependentUpon>MenuGenerarReportesG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdministrarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdministrarInventario.Designer.cs">
+      <DependentUpon>MenuAdministrarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuSupervisor.Designer.cs">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuAdminMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuAdminMedicamentos.Designer.cs">
+      <DependentUpon>MenuAdminMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MENU\MenuPersonalMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU\MenuPersonalMedico.Designer.cs">
+      <DependentUpon>MenuPersonalMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRUD\EliminarInventario.resx">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\EliminarMedicamento.resx">
+      <DependentUpon>EliminarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\EliminarSolicitudM.resx">
+      <DependentUpon>EliminarSolicitudM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarInventario.resx">
+      <DependentUpon>IngresarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarSolicitudMedicamentos.resx">
+      <DependentUpon>IngresarSolicitudMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarMedicamentos.resx">
+      <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ListarMedicamento.resx">
+      <DependentUpon>ListarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ModificarInventario.resx">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ModificarMedicamento.resx">
+      <DependentUpon>ModificarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuGenerarReportesG.resx">
+      <DependentUpon>MenuGenerarReportesG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuAdministrarInventario.resx">
+      <DependentUpon>MenuAdministrarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuSupervisor.resx">
+      <DependentUpon>MenuSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuAdminMedicamentos.resx">
+      <DependentUpon>MenuAdminMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuPersonalMedico.resx">
+      <DependentUpon>MenuPersonalMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Capa_DTO.csproj">
+      <Project>{a26c85c2-88c9-46e1-8703-36c25d241c77}</Project>
+      <Name>Capa_DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\CapaNegocio.csproj">
+      <Project>{b8c19fa9-2f4f-4b82-afbd-18449c31743a}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

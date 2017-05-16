@@ -1,0 +1,7 @@
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\bin\x86\Debug\Datos.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\bin\x86\Debug\Datos.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\bin\x86\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\bin\x86\Debug\Entidades.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\obj\x86\Debug\Capa_Conexion.csprojResolveAssemblyReference.cache
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\obj\x86\Debug\Datos.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Datos\obj\x86\Debug\Datos.pdb

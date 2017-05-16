@@ -1,0 +1,9 @@
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Negocio.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Negocio.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Datos.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Datos.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\bin\x86\Debug\Entidades.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\x86\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\x86\Debug\Negocio.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\x86\Debug\Negocio.pdb

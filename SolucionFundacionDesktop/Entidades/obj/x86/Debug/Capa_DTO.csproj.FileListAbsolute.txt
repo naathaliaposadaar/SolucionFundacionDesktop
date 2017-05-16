@@ -1,0 +1,4 @@
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Entidades\bin\x86\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Entidades\bin\x86\Debug\Entidades.pdb
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Entidades\obj\x86\Debug\Entidades.dll
+C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Entidades\obj\x86\Debug\Entidades.pdb
