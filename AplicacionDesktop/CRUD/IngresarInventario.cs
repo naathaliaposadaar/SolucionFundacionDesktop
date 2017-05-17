@@ -40,6 +40,10 @@ namespace AplicacionDesktop.MENU
                         //validar q contenga datos
                         cbxMedicina.DisplayMember = "nom_comercial";
                         cbxMedicina.ValueMember = "id_medicina";
+                        //cbxMedicina.DataSource = DataHelper.LoadDataTable();
+                        //cbxMedicina.AutoCompleteCustomSource = DataHelper.LoadAutoComplete();
+                        //cbxMedicina.AutoCompleteMode = AutoCompleteMode.Suggest;
+                        //cbxMedicina.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
                         cbxMedicina.SelectedIndex = -1;
                         if (cbxMedicina.SelectedIndex == -1)

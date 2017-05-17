@@ -109,17 +109,7 @@ namespace CapaNegocio.NegocioFarmacia
                        
             return id_inventario;
         }
-
-        public System.Data.DataSet listarInventarios()
-        {
-
-            configuraConexion();
-            conectar.CadenaSQL = "SELECT * FROM inventario order by id_inventario";
-            conectar.EsSelect = true;
-            conectar.conecta();
-
-            return conectar.DbDataSet;
-        }
+               
 
         public System.Data.DataSet inventarioModificado(int id)
         {
@@ -127,6 +117,29 @@ namespace CapaNegocio.NegocioFarmacia
             configuraConexion();
             conectar.CadenaSQL = String.Format("SELECT * FROM {0} WHERE id_inventario = '{1}'",
                                     conectar.NombreTabla, id);
+            conectar.EsSelect = true;
+            conectar.conecta();
+
+            return conectar.DbDataSet;
+        }
+//        select med.NOM_COMERCIAL,bm.stock, inv.CANTIDAD_PRODUCTOS ,
+//inv.FECHA_INVENTARIO ,
+//inv.OBSERVACIONES  from inventario inv 
+//inner join bodega_med bm 
+//on inv.id_inventario=bm.id_inventario
+//join medicina med 
+//on bm.ID_MEDICINA=med.ID_MEDICINA;
+        public System.Data.DataSet listarInventarios()
+        {
+
+            configuraConexion();
+            conectar.CadenaSQL = "select med.NOM_COMERCIAL,bm.stock, inv.CANTIDAD_PRODUCTOS ,"
+                                    + "inv.FECHA_INVENTARIO ,"
+                                    + "inv.OBSERVACIONES  from inventario inv "
+                                    + "inner join bodega_med bm "
+                                    + "on inv.id_inventario=bm.id_inventario"
+                                    + "join medicina med "
+                                    + "on bm.ID_MEDICINA=med.ID_MEDICINA;";
             conectar.EsSelect = true;
             conectar.conecta();
 

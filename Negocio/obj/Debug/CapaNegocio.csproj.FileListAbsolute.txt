@@ -18,13 +18,3 @@ C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.dll
 C:\Users\nathalia\Dropbox\caso7\prog\escritorio\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.pdb
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Negocio.dll
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Negocio.pdb
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Datos.dll
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Entidades.dll
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Oracle.DataAccess.dll
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Datos.pdb
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Entidades.pdb
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.dll
-C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.pdb
