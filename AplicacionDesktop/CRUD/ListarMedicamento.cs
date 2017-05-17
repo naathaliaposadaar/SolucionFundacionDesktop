@@ -18,9 +18,17 @@ namespace AplicacionDesktop.MENU
         {
             InitializeComponent();
             NegocioMedicina medicina = new NegocioMedicina();
-            dataGridView1.DataSource = medicina.listarMedicinas().Tables[0];
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Update();
+            if (medicina.listarMedicinas().Tables[0].Rows.Count > 0)
+            {
+                dataGridView1.DataSource = medicina.listarMedicinas().Tables[0];
+                dataGridView1.ReadOnly = true;
+                dataGridView1.Update();
+            }
+            else
+            {
+                MessageBox.Show("No hay medicinas ingresadas");
+            }
+            
         }
 
         

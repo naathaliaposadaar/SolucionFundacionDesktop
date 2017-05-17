@@ -52,6 +52,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -99,6 +102,12 @@
     </Compile>
     <Compile Include="CRUD\IngresarMedicamentos.Designer.cs">
       <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ListarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ListarInventario.Designer.cs">
+      <DependentUpon>ListarInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD\ListarMedicamento.cs">
       <SubType>Form</SubType>
@@ -192,6 +201,9 @@
     <EmbeddedResource Include="CRUD\IngresarMedicamentos.resx">
       <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ListarInventario.resx">
+      <DependentUpon>ListarInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ListarMedicamento.resx">
       <DependentUpon>ListarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +237,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,4 +1,5 @@
-﻿using AplicacionDesktop.MENU;
+﻿using AplicacionDesktop.CRUD;
+using AplicacionDesktop.MENU;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,9 @@ namespace AplicacionDesktop.MENU
 
         private void btnListarI_Click(object sender, EventArgs e)
         {
-
+            ListarInventario inv = new ListarInventario();
+            inv.Show();
+            Hide();
         }
 
         private void btnModificarI_Click(object sender, EventArgs e)

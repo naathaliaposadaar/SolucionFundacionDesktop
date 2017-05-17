@@ -133,13 +133,13 @@ namespace CapaNegocio.NegocioFarmacia
         {
 
             configuraConexion();
-            conectar.CadenaSQL = "select med.NOM_COMERCIAL,bm.stock, inv.CANTIDAD_PRODUCTOS ,"
-                                    + "inv.FECHA_INVENTARIO ,"
+            conectar.CadenaSQL = "select med.NOM_COMERCIAL as NOMBRE,bm.stock, inv.CANTIDAD_PRODUCTOS AS CANTIDAD,"
+                                    + "TO_DATE(inv.FECHA_INVENTARIO,'dd/mm/yyyy') AS FECHA ,"
                                     + "inv.OBSERVACIONES  from inventario inv "
                                     + "inner join bodega_med bm "
-                                    + "on inv.id_inventario=bm.id_inventario"
+                                    + "on inv.id_inventario=bm.id_inventario "
                                     + "join medicina med "
-                                    + "on bm.ID_MEDICINA=med.ID_MEDICINA;";
+                                    + "on bm.ID_MEDICINA=med.ID_MEDICINA";
             conectar.EsSelect = true;
             conectar.conecta();
 
