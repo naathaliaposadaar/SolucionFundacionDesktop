@@ -28,7 +28,7 @@ namespace Capa_Conexion
         public String CadenaConexion
         {
             get { return cadenaConexion; }
-            set { cadenaConexion = string.Format("DATA SOURCE=nathalia-PC;USER ID=FUNDACION ; password =123"); }
+            set { cadenaConexion = string.Format("DATA SOURCE=localhost;USER ID=FUNDACION ; password =123"); }
         }
 
         private String cadenaSQL;

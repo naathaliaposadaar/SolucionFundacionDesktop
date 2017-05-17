@@ -100,38 +100,11 @@ namespace AplicacionDesktop.MENU
                                 auxInventario.Fecha_inventario = dtpFecha.Value;
                                 if (rdMedicina.Checked && cbxMedicina.SelectedIndex != 1)
                                 {
-                                    //rdProducto.Enabled = false;
-                                    //NegocioMedicina medic = new NegocioMedicina();
-                                    //try
-                                    //{
-                                    //    if (medic.listarMedicinas().Tables[0].Rows.Count > 0)
-                                    //    {
-                                    //        cbxMedicina.DataSource = medic.listarMedicinas().Tables[0];
-                                    //        //validar q contenga datos
-                                    //        cbxMedicina.DisplayMember = "nom_comercial";
-                                    //        cbxMedicina.ValueMember = "id_medicina";
 
-                                    //        cbxMedicina.SelectedIndex = -1;
-                                    //        if (cbxMedicina.SelectedIndex == -1)
-                                    //        {
-                                    //            cbxMedicina.Text = "Seleccione una Medicina";
-                                    //        }
-                                    //    }
-                                    //    else
-                                    //    {
-                                    //        MessageBox.Show("No hay medicinas ingresadas");
-                                    //    }
-                                    //}
-                                    //catch (Exception)
-                                    //{
-
-                                    //    throw;
-                                    //}
-                                    
                                     if (inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos) == 0)
                                     {
 
-                                        DialogResult dialogResult = MessageBox.Show("Desea agregarinventario de la medicina: " + cbxMedicina.Text, "Información", MessageBoxButtons.YesNo);
+                                        DialogResult dialogResult = MessageBox.Show("Desea agregar inventario de la medicina: " + cbxMedicina.Text, "Información", MessageBoxButtons.YesNo);
                                         if (dialogResult == DialogResult.Yes)
                                         {
                                             DialogResult result = MessageBox.Show("Se ingresara el inventario de la medicina ¿desea continuar?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -146,7 +119,7 @@ namespace AplicacionDesktop.MENU
                                                         auxBmedicina.Id_medicina = int.Parse(cbxMedicina.SelectedValue.ToString());
                                                         //obtener id inventario
                                                         auxInventario.Id_inventario = inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos);
-                                                        
+
                                                         //obtener medicina
                                                         auxMedicina = medicina.consultarPorIdMedicina(auxBmedicina.Id_medicina);
                                                         //obtener cantidad medicina
@@ -160,7 +133,7 @@ namespace AplicacionDesktop.MENU
                                                             dtpFecha.Value = DateTime.Now;
                                                             cbxMedicina.SelectedIndex = -1;
                                                             rdMedicina.Checked = false;
-
+                                                            MessageBox.Show("Inventario ingresado correctamente");
                                                         }
                                                         else
                                                         {
@@ -182,92 +155,63 @@ namespace AplicacionDesktop.MENU
                                 }
                                 else
                                 {
-                                    MessageBox.Show("ERROR");
-                                }
-                                if (rdProducto.Checked && cbxProducto.SelectedIndex != 1)
-                                {
-                                    NegocioProducto produc = new NegocioProducto();
-                                    try
+                                    if (rdProducto.Checked && cbxProducto.SelectedIndex != 1)
                                     {
-                                        rdMedicina.Enabled = false;
-                                        cbxMedicina.Enabled = false;
-                                        if (producto.listarProductos().Tables[0].Rows.Count > 0)
-                                        {
+                                        NegocioProducto produc = new NegocioProducto();
+                                        
 
-                                            cbxProducto.DataSource = produc.listarProductos().Tables[0];
-                                            cbxProducto.DisplayMember = "nombre";
-                                            cbxProducto.ValueMember = "id_producto";
-                                            cbxProducto.SelectedIndex = -1;
-                                            if (cbxProducto.SelectedIndex == -1)
+                                        if (inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos) == 0)
+                                        {
+                                            DialogResult dialogResult = MessageBox.Show("Desea agregar un inventario de producto: " + cbxProducto.Text, "Información", MessageBoxButtons.YesNo);
+                                            if (dialogResult == DialogResult.Yes)
                                             {
-                                                cbxProducto.Text = "Seleccione un Producto";
+                                                DialogResult result = MessageBox.Show("Se ingresara inventario de producto ¿desea continuar?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                                                switch (result)
+                                                {
+
+
+                                                    case DialogResult.Yes:
+                                                        if (inventario.ingresarInventario(auxInventario) > 0)
+                                                        {
+                                                            //obtener id inventario
+                                                            auxInventario.Id_inventario = inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos);
+
+                                                            auxBproducto.Id_producto = int.Parse(cbxProducto.SelectedValue.ToString());
+                                                            //Obtener cantidad producto
+                                                            //?? como obtener cantidad
+                                                            auxBproducto.Stock = int.Parse(txtCantidad.Text);
+
+                                                            if (bProducto.ingresarBodegaProducto(auxBproducto, auxInventario.Id_inventario) > 0)
+                                                            {
+
+                                                                txtCantidad.Text = "";
+                                                                txtObservaciones.Text = "";
+                                                                dtpFecha.Value = DateTime.Now;
+                                                                cbxMedicina.SelectedIndex = -1;
+                                                                rdMedicina.Checked = false;
+                                                                MessageBox.Show("Inventario ingresado correctamente");
+                                                            }
+                                                            else
+                                                            {
+                                                                MessageBox.Show("ERROR AL INGRESAR BODEGA PRODUCTO");
+                                                            }
+                                                        }
+                                                        break;
+                                                    case DialogResult.No:
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("No hay productos ingresadas");
+                                            MessageBox.Show("Este inventario ya esta registrado");
                                         }
+
                                     }
-                                    catch (Exception)
-                                    {
-
-                                        throw;
-                                    }
-                                    
-                                    if (inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos) == 0)
-                                    {
-                                        DialogResult dialogResult = MessageBox.Show("Desea agregar inventario de la medicina: " + cbxProducto.Text, "Información", MessageBoxButtons.YesNo);
-                                        if (dialogResult == DialogResult.Yes)
-                                        {
-                                            DialogResult result = MessageBox.Show("Se ingresara el inventario de la medicina ¿desea continuar?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                                            switch (result)
-                                            {
-
-
-                                                case DialogResult.Yes:
-                                                    if (inventario.ingresarInventario(auxInventario) > 0)
-                                                    {
-                                                        //obtener id inventario
-                                                        auxInventario.Id_inventario = inventario.consultarInventario(auxInventario.Observaciones, auxInventario.Fecha_inventario, auxInventario.Cantidad_productos);
-                                                        
-                                                        auxBproducto.Id_producto = int.Parse(cbxProducto.SelectedValue.ToString());
-                                                        //Obtener cantidad producto
-                                                        //?? como obtener cantidad
-                                                        auxBproducto.Stock = int.Parse(txtCantidad.Text);
-                                    
-                                                        if (bProducto.ingresarBodegaProducto(auxBproducto, auxInventario.Id_inventario) > 0)
-                                                        {
-
-                                                            txtCantidad.Text = "";
-                                                            txtObservaciones.Text = "";
-                                                            dtpFecha.Value = DateTime.Now;
-                                                            cbxMedicina.SelectedIndex = -1;
-                                                            rdMedicina.Checked = false;
-
-                                                        }
-                                                        else
-                                                        {
-                                                            MessageBox.Show("ERROR AL INGRESAR BODEGA PRODUCTO");
-                                                        }
-                                                    }
-                                                    break;
-                                                case DialogResult.No:
-                                                    break;
-                                                default:
-                                                    break;
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Este inventario ya esta registrado");
-                                    }
-
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Seleccione una medicina");
-                                }
+
                             }
                             else
                             {

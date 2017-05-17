@@ -46,7 +46,7 @@ namespace CapaNegocio.NegocioFarmacia
             Conectar = new Conexion();
             Conectar.NombreBaseDeDatos = "FUNDACION";
             Conectar.NombreTabla = "DIRECCION";
-            Conectar.CadenaConexion = "DATA SOURCE=nathalia-PC;USER ID=FUNDACION ; password =123";
+            Conectar.CadenaConexion = "DATA SOURCE=localhost;USER ID=FUNDACION ; password =123";
 
         }
 

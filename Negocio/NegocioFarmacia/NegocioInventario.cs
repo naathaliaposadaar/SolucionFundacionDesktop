@@ -46,7 +46,7 @@ namespace CapaNegocio.NegocioFarmacia
             Conectar = new Conexion();
             Conectar.NombreBaseDeDatos = "FUNDACION";
             Conectar.NombreTabla = "INVENTARIO";
-            Conectar.CadenaConexion = "DATA SOURCE=nathalia-PC;USER ID=FUNDACION ; password =123";
+            Conectar.CadenaConexion = "DATA SOURCE=localhost;USER ID=FUNDACION ; password =123";
 
         }
 
@@ -54,7 +54,7 @@ namespace CapaNegocio.NegocioFarmacia
         {
 
             configuraConexion();
-            conectar.CadenaSQL = String.Format("INSERT INTO {0}(id_inventario, observaciones, cantidad_productos, fecha_inventario) VALUES({1},'{2}',{3},TO_CHAR('{4}','dd/mm/yyyy hh24:mi:ss'))",
+            conectar.CadenaSQL = String.Format("INSERT INTO {0}(id_inventario, observaciones, cantidad_productos, fecha_inventario) VALUES({1},'{2}',{3},TO_DATE('{4}','dd/mm/yyyy hh24:mi:ss'))",
                                                    conectar.NombreTabla, Seq_inventario,inventario.Observaciones,inventario.Cantidad_productos,inventario.Fecha_inventario);
 
 
@@ -83,7 +83,7 @@ namespace CapaNegocio.NegocioFarmacia
             this.configuraConexion();
             this.conectar.CadenaSQL = String.Format("UPDATE inventario SET cantidad_productos={0},"
                                                         + " observaciones ='{1}',"
-                                                        + " fecha_inventario=TO_CHAR('{2}','dd/mm/yyyy hh24:mi:ss')"                                                        
+                                                        + " fecha_inventario=to_date('{2}','dd/mm/yyyy hh24:mi:ss')"                                                        
                                                         + " WHERE id_inventario ={3}"
                                                         ,inv.Cantidad_productos,inv.Observaciones,inv.Fecha_inventario,inv.Id_inventario);
             this.conectar.EsSelect = false;
@@ -94,10 +94,20 @@ namespace CapaNegocio.NegocioFarmacia
         public int consultarInventario(String observaciones, DateTime fecha , int cantidad)
         {
             configuraConexion();
-            conectar.CadenaSQL = String.Format("SELECT id_inventario FROM {0} WHERE observaciones = '{1}' AND fecha_inventario = to_char('{2}','dd/mm/yyyy hh24:mi:ss') and cantidad_productos={3}",
+            conectar.CadenaSQL = String.Format("SELECT id_inventario FROM {0} WHERE observaciones = '{1}' AND fecha_inventario = to_date('{2}','dd/mm/yyyy hh24:mi:ss') and cantidad_productos={3}",
                                      conectar.NombreTabla, observaciones,fecha,cantidad);
             conectar.EsSelect = true;
-            return conectar.conecta();
+
+            int id_inventario=0;
+            if (conectar.conecta()!=0)
+	        {       
+		        System.Data.DataTable dt = new System.Data.DataTable();
+                dt = conectar.DbDataSet.Tables[0];                
+                id_inventario = int.Parse(dt.Rows[0]["id_inventario"].ToString());
+
+	        }       
+                       
+            return id_inventario;
         }
 
         public System.Data.DataSet listarInventarios()

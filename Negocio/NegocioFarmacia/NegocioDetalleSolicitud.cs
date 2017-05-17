@@ -46,7 +46,7 @@ namespace CapaNegocio.NegocioFarmacia
             Conectar = new Conexion();
             Conectar.NombreBaseDeDatos = "FUNDACION";
             Conectar.NombreTabla = "DET_SOLICITUD";
-            Conectar.CadenaConexion = "DATA SOURCE=nathalia-PC;USER ID=FUNDACION ; password =123";
+            Conectar.CadenaConexion = "DATA SOURCE=localhost;USER ID=FUNDACION ; password =123";
 
         }
 
@@ -54,7 +54,7 @@ namespace CapaNegocio.NegocioFarmacia
         {
 
             configuraConexion();
-            conectar.CadenaSQL = String.Format("INSERT INTO {0}(id_det_solicitud, cantidad, fecha, id_medicina) VALUES({1},{2},TO_CHAR('{3}','dd/mm/yyyy hh24:mi:ss'),'{4}',{5},{6})",
+            conectar.CadenaSQL = String.Format("INSERT INTO {0}(id_det_solicitud, cantidad, fecha, id_medicina) VALUES({1},{2},to_date('{3}','dd/mm/yyyy hh24:mi:ss'),'{4}',{5},{6})",
                                                    conectar.NombreTabla, Seq_det_solic,dtSol.Cantidad,dtSol.Fecha,medicina);
 
 
@@ -82,7 +82,7 @@ namespace CapaNegocio.NegocioFarmacia
         {
             this.configuraConexion();
             this.conectar.CadenaSQL = String.Format("UPDATE det_solicitud SET cantidad={0},"
-                                                        + " fecha =TO_CHAR('{1}','dd/mm/yyyy hh24:mi:ss',"
+                                                        + " fecha =to_date('{1}','dd/mm/yyyy hh24:mi:ss',"
                                                         + " id_medicina={2}"                                                        
                                                         + " WHERE id_det_solicitud ={3}"
                                                         , dtS.Cantidad,dtS.Fecha,dtS.Id_medicina,dtS.Id_det_solicitud);
@@ -94,7 +94,7 @@ namespace CapaNegocio.NegocioFarmacia
         public int consultarDetSolicitud(DateTime dtSol)
         {
             configuraConexion();
-            conectar.CadenaSQL = String.Format("SELECT cantidad FROM {0} WHERE fecha = TO_CHAR('{1}','dd/mm/yyyyy hh24:mi:ss')",
+            conectar.CadenaSQL = String.Format("SELECT cantidad FROM {0} WHERE fecha = to_date('{1}','dd/mm/yyyyy hh24:mi:ss')",
                                      conectar.NombreTabla, dtSol);
             conectar.EsSelect = true;
             return conectar.conecta();

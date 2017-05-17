@@ -48,7 +48,7 @@
             this.rdProducto.AutoCheck = false;
             this.rdProducto.AutoSize = true;
             this.rdProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdProducto.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rdProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.rdProducto.Location = new System.Drawing.Point(40, 79);
             this.rdProducto.Name = "rdProducto";
             this.rdProducto.Size = new System.Drawing.Size(99, 24);
@@ -64,7 +64,7 @@
             this.rdMedicina.AutoCheck = false;
             this.rdMedicina.AutoSize = true;
             this.rdMedicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMedicina.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.rdMedicina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.rdMedicina.Location = new System.Drawing.Point(295, 79);
             this.rdMedicina.Name = "rdMedicina";
             this.rdMedicina.Size = new System.Drawing.Size(98, 24);
@@ -79,7 +79,7 @@
             // 
             this.lblIngresarInventario.AutoSize = true;
             this.lblIngresarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresarInventario.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblIngresarInventario.ForeColor = System.Drawing.Color.Green;
             this.lblIngresarInventario.Location = new System.Drawing.Point(210, 9);
             this.lblIngresarInventario.Name = "lblIngresarInventario";
             this.lblIngresarInventario.Size = new System.Drawing.Size(183, 24);
@@ -106,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(36, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 20);
@@ -117,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label2.Location = new System.Drawing.Point(36, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
@@ -167,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label3.Location = new System.Drawing.Point(37, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 20);
@@ -186,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(632, 347);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label3);
