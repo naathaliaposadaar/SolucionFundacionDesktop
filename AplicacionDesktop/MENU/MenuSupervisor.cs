@@ -1,4 +1,4 @@
-﻿using AplicacionDesktop.MENU;
+﻿using AplicacionDesktop.CRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionDesktop.MENU
+namespace AplicacionDesktop.CRUD
 {
     public partial class MenuSupervisor : Form
     {

@@ -46,6 +46,7 @@
             this.button1.TabIndex = 173;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVolver
             // 
@@ -56,6 +57,7 @@
             this.btnVolver.TabIndex = 172;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // cbxProducto
             // 
@@ -95,6 +97,7 @@
             this.btnEliminar.TabIndex = 165;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblNC
             // 

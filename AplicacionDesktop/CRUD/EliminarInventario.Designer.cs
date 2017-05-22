@@ -1,4 +1,4 @@
-﻿namespace AplicacionDesktop.MENU
+﻿namespace AplicacionDesktop.CRUD
 {
     partial class EliminarInventario
     {
@@ -47,6 +47,7 @@
             this.btnEliminar.TabIndex = 132;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label8
             // 
@@ -77,6 +78,7 @@
             this.button1.TabIndex = 164;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVolver
             // 
@@ -87,6 +89,7 @@
             this.btnVolver.TabIndex = 163;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // cbxProducto
             // 

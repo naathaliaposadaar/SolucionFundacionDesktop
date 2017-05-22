@@ -1,4 +1,4 @@
-﻿using AplicacionDesktop.MENU;
+﻿using AplicacionDesktop.CRUD;
 using Capa_DTO.Medicamento;
 using CapaNegocio.NegocioFarmacia;
 using System;
@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionDesktop.MENU
+namespace AplicacionDesktop.CRUD
 {
     public partial class EliminarMedicamento : Form
     {

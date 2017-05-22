@@ -1,4 +1,4 @@
-﻿namespace AplicacionDesktop.MENU
+﻿namespace AplicacionDesktop.CRUD
 {
     partial class IngresarInventario
     {
