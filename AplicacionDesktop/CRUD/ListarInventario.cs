@@ -26,6 +26,8 @@ namespace AplicacionDesktop.CRUD
                 
                 dataGridView1.DataSource = inventario.listarInventarios().Tables[0];
                 dataGridView1.ReadOnly = true;
+                //cargar solo las filas
+                //dataGridView1.Rows.Remove
                 dataGridView1.Update();
 
                 //dataGridView1.ColumnHeadersVisible = false;
@@ -41,82 +43,88 @@ namespace AplicacionDesktop.CRUD
             NegocioInventario inventario = new NegocioInventario();
             if (inventario.listarInventarios().Tables[0].Rows.Count > 0)
             {
-                // Creamos el documento con el tamaño de página tradicional
-                Document doc = new Document(PageSize.LETTER);
-                // Indicamos donde vamos a guardar el documento
-                PdfWriter writer = PdfWriter.GetInstance(doc,
-                                            new FileStream(@"C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\prueba.pdf", FileMode.Create));
+                //// Creamos el documento con el tamaño de página tradicional
+                //Document doc = new Document(PageSize.LETTER);
+                //// Indicamos donde vamos a guardar el documento
+                //PdfWriter writer = PdfWriter.GetInstance(doc,
+                //                            new FileStream(@"C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\prueba.pdf", FileMode.Create));
                 try
                 {
-                    // Le colocamos el título y el autor
-                    // **Nota: Esto no será visible en el documento
-                    doc.AddTitle("Reporte Inventarios");
-                    doc.AddCreator("Fundacion Apoyo");
+                    //// Le colocamos el título y el autor
+                    //// **Nota: Esto no será visible en el documento
+                    //doc.AddTitle("Reporte Inventarios");
+                    //doc.AddCreator("Fundacion Apoyo");
 
-                    // Abrimos el archivo
-                    doc.Open();
-                    // Creamos el tipo de Font que vamos utilizar
-                    iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                    //// Abrimos el archivo
+                    //doc.Open();
+                    //// Creamos el tipo de Font que vamos utilizar
+                    //iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
 
-                    // Escribimos el encabezamiento en el documento
-                    doc.Add(new Paragraph("Inventario Farmacia Casa Reposo Fundacion Apoyo"));
-                    doc.Add(Chunk.NEWLINE);
+                    //// Escribimos el encabezamiento en el documento
+                    //doc.Add(new Paragraph("Inventario Farmacia Casa Reposo Fundacion Apoyo"));
+                    //doc.Add(Chunk.NEWLINE);
 
                     // Creamos una tabla del tamaño del dataDriew
                     // de nuestros visitante.
                     PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
                     pdfTable.WidthPercentage = 100;
-                    doc.Add(pdfTable);
+                    pdfTable.DefaultCell.Padding = 3;
+                    //    pdfTable.WidthPercentage = 30;
+                    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+                    pdfTable.DefaultCell.BorderWidth = 1;
+                    
+                    //Header Row
+                    foreach (DataGridViewColumn column in dataGridView1.Columns)
+                    {
+                         PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                         cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                         pdfTable.AddCell(cell);
+                    }
+                    //Datarow
+                    
+                   
+                        
 
-//                    private void btnExportPdf_Click(object sender, EventArgs e)
-//{
-//    //Creating iTextSharp Table from the DataTable data
-//    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
-//    pdfTable.DefaultCell.Padding = 3;
-//    pdfTable.WidthPercentage = 30;
-//    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-//    pdfTable.DefaultCell.BorderWidth = 1;
- 
-//    //Adding Header row
-//    foreach (DataGridViewColumn column in dataGridView1.Columns)
-//    {
-//        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-//        cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
-//        pdfTable.AddCell(cell);
-//    }
- 
-//    //Adding DataRow
-//    foreach (DataGridViewRow row in dataGridView1.Rows)
-//    {
-//        foreach (DataGridViewCell cell in row.Cells)
-//        {
-//            pdfTable.AddCell(cell.Value.ToString());
-//        }
-//    }
- 
-//    //Exporting to PDF
-//    string folderPath = "C:\\PDFs\\";
-//    if (!Directory.Exists(folderPath))
-//    {
-//        Directory.CreateDirectory(folderPath);
-//    }
-//    using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
-//    {
-//        Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
-//        PdfWriter.GetInstance(pdfDoc, stream);
-//        pdfDoc.Open();
-//        pdfDoc.Add(pdfTable);
-//        pdfDoc.Close();
-//        stream.Close();
-//    }
-//}
-                    doc.Close();
-                    writer.Close();
+                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            {
+                                if (!row.Cells.ToString().Equals(""))
+                                {
+                                    foreach (DataGridViewCell cell in row.Cells)
+                                    {
+                                        pdfTable.AddCell(cell.Value.ToString());
+                                    }
+                                }
+                            }
+                          
+                      
+                        
+                            
+                       
+                    
+
+
+                    //Exporting to PDF
+                    string folderPath = "C:\\PDFs\\";
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+                    using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+                    {
+                        Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                        PdfWriter.GetInstance(pdfDoc, stream);
+                        pdfDoc.Open();
+                        pdfDoc.Add(pdfTable);
+                        pdfDoc.Close();
+                        stream.Close();
+                    }
+               
+                   
                 }
                 catch (Exception)
                 {
-                    
-                    throw;
+
+                    MessageBox.Show("ERROR al intentar crear PDF");
                 }
                 
             }
