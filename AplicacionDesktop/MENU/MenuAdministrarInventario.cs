@@ -35,12 +35,23 @@ namespace AplicacionDesktop.MENU
 
         private void btnModificarI_Click(object sender, EventArgs e)
         {
-
+            ModificarInventario inv = new ModificarInventario();
+            inv.Show();
+            Hide();
         }
 
         private void btnEliminarI_Click(object sender, EventArgs e)
         {
+            EliminarInventario inv = new EliminarInventario();
+            inv.Show();
+            Hide();
+        }
 
+        private void btnVolverI_Click(object sender, EventArgs e)
+        {
+            MenuAdministrarInventario menu = new MenuAdministrarInventario();
+            menu.Show();
+            Hide();
         }
     }
 }

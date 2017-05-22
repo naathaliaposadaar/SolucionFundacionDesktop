@@ -46,6 +46,7 @@
             this.btnVolverI.TabIndex = 17;
             this.btnVolverI.Text = "Volver";
             this.btnVolverI.UseVisualStyleBackColor = true;
+            this.btnVolverI.Click += new System.EventHandler(this.btnVolverI_Click);
             // 
             // btnEliminarI
             // 
@@ -100,12 +101,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(115, 9);
+            this.label1.Location = new System.Drawing.Point(178, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 24);
+            this.label1.Size = new System.Drawing.Size(212, 24);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Administrar Inventario Medicamentos";
+            this.label1.Text = "Administrar Inventario";
             // 
             // MenuAdministrarInventario
             // 

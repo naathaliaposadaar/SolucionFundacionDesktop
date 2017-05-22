@@ -64,9 +64,9 @@ namespace AplicacionDesktop.CRUD
 
                     // Creamos una tabla del tamaño del dataDriew
                     // de nuestros visitante.
-                    PdfPTable tblPDF = new PdfPTable(dataGridView1.ColumnCount);
-                    tblPDF.WidthPercentage = 100;
-                    doc.Add(tblPDF);
+                    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+                    pdfTable.WidthPercentage = 100;
+                    doc.Add(pdfTable);
 
 //                    private void btnExportPdf_Click(object sender, EventArgs e)
 //{
