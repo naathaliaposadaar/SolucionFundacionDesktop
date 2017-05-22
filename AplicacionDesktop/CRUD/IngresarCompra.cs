@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionDesktop.MENU;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace AplicacionDesktop.CRUD
         private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolverr_Click(object sender, EventArgs e)
+        {
+            MenuAdminCompra mCompra = new MenuAdminCompra();
+            mCompra.Show();
+            Hide();
         }
     }
 }

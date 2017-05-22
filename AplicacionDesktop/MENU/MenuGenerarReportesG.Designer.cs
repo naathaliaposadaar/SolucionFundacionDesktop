@@ -1,4 +1,4 @@
-﻿namespace AplicacionDesktop.CRUD
+﻿namespace AplicacionDesktop.MENU
 {
     partial class MenuGenerarReportesG
     {

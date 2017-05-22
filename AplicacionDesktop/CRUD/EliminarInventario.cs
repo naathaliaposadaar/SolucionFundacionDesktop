@@ -1,5 +1,5 @@
 ﻿using CapaNegocio.NegocioFarmacia;
-using AplicacionDesktop.CRUD;
+using AplicacionDesktop.MENU;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +28,7 @@ namespace AplicacionDesktop.CRUD
                 {
                     cbxProducto.DataSource = inven.listarInventarios().Tables[0];
                     //validar q contenga datos
-                    cbxProducto.DisplayMember = "nombre";
+                    cbxProducto.DisplayMember = "observaciones";
                     cbxProducto.ValueMember = "id_inventario";
 
                     cbxProducto.SelectedIndex = -1;
@@ -94,15 +94,15 @@ namespace AplicacionDesktop.CRUD
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuAdminMedicamentos med = new MenuAdminMedicamentos();
-            med.Show();
+            MenuAdministrarInventario inv = new MenuAdministrarInventario();
+            inv.Show();
             Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuAdminMedicamentos med = new MenuAdminMedicamentos();
-            med.Show();
+            MenuAdministrarInventario inv = new MenuAdministrarInventario();
+            inv.Show();
             Hide();
         }
     }

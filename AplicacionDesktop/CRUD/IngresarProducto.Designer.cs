@@ -119,6 +119,7 @@
             this.btnVolver.TabIndex = 14;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnIngresar
             // 
@@ -130,6 +131,7 @@
             this.btnIngresar.TabIndex = 13;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // cbxTipo
             // 

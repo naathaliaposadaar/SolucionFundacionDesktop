@@ -193,6 +193,12 @@
     <Compile Include="CRUD\ModificarProducto.Designer.cs">
       <DependentUpon>ModificarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\ModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ModificarProveedor.Designer.cs">
+      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="MENU\MenuAdminCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ModificarProducto.resx">
       <DependentUpon>ModificarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ModificarProveedor.resx">
+      <DependentUpon>ModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU\MenuAdminCompra.resx">
+      <DependentUpon>MenuAdminCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU\MenuGenerarReportesG.resx">
       <DependentUpon>MenuGenerarReportesG.cs</DependentUpon>

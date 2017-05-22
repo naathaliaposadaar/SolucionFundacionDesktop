@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AplicacionDesktop.MENU;
 
 namespace AplicacionDesktop.CRUD
 {
@@ -37,64 +38,137 @@ namespace AplicacionDesktop.CRUD
 
         private void btn_pdf_Click(object sender, EventArgs e)
         {
-            // Creamos el documento con el tamaño de página tradicional
-            Document doc = new Document(PageSize.LETTER);
-            // Indicamos donde vamos a guardar el documento
-            PdfWriter writer = PdfWriter.GetInstance(doc,
-                                        new FileStream(@"C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\prueba.pdf", FileMode.Create));
+            NegocioInventario inventario = new NegocioInventario();
+            if (inventario.listarInventarios().Tables[0].Rows.Count > 0)
+            {
+                // Creamos el documento con el tamaño de página tradicional
+                Document doc = new Document(PageSize.LETTER);
+                // Indicamos donde vamos a guardar el documento
+                PdfWriter writer = PdfWriter.GetInstance(doc,
+                                            new FileStream(@"C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\prueba.pdf", FileMode.Create));
+                try
+                {
+                    // Le colocamos el título y el autor
+                    // **Nota: Esto no será visible en el documento
+                    doc.AddTitle("Reporte Inventarios");
+                    doc.AddCreator("Fundacion Apoyo");
 
-            // Le colocamos el título y el autor
-            // **Nota: Esto no será visible en el documento
-            doc.AddTitle("Reporte Inventarios");
-            doc.AddCreator("Fundacion Apoyo");
+                    // Abrimos el archivo
+                    doc.Open();
+                    // Creamos el tipo de Font que vamos utilizar
+                    iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
 
-            // Abrimos el archivo
-            doc.Open();
-            // Creamos el tipo de Font que vamos utilizar
-            iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+                    // Escribimos el encabezamiento en el documento
+                    doc.Add(new Paragraph("Inventario Farmacia Casa Reposo Fundacion Apoyo"));
+                    doc.Add(Chunk.NEWLINE);
 
-            // Escribimos el encabezamiento en el documento
-            doc.Add(new Paragraph("Inventario Farmacia Casa Reposo Fundacion Apoyo"));
-            doc.Add(Chunk.NEWLINE);
+                    // Creamos una tabla del tamaño del dataDriew
+                    // de nuestros visitante.
+                    PdfPTable tblPDF = new PdfPTable(dataGridView1.ColumnCount);
+                    tblPDF.WidthPercentage = 100;
+                    doc.Add(tblPDF);
 
-            // Creamos una tabla que contendrá el nombre, apellido y país
-            // de nuestros visitante.
-            PdfPTable tblPDF = new PdfPTable(5);
-            tblPDF.WidthPercentage = 100;
+//                    private void btnExportPdf_Click(object sender, EventArgs e)
+//{
+//    //Creating iTextSharp Table from the DataTable data
+//    PdfPTable pdfTable = new PdfPTable(dataGridView1.ColumnCount);
+//    pdfTable.DefaultCell.Padding = 3;
+//    pdfTable.WidthPercentage = 30;
+//    pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+//    pdfTable.DefaultCell.BorderWidth = 1;
+ 
+//    //Adding Header row
+//    foreach (DataGridViewColumn column in dataGridView1.Columns)
+//    {
+//        PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+//        cell.BackgroundColor = new iTextSharp.text.Color(240, 240, 240);
+//        pdfTable.AddCell(cell);
+//    }
+ 
+//    //Adding DataRow
+//    foreach (DataGridViewRow row in dataGridView1.Rows)
+//    {
+//        foreach (DataGridViewCell cell in row.Cells)
+//        {
+//            pdfTable.AddCell(cell.Value.ToString());
+//        }
+//    }
+ 
+//    //Exporting to PDF
+//    string folderPath = "C:\\PDFs\\";
+//    if (!Directory.Exists(folderPath))
+//    {
+//        Directory.CreateDirectory(folderPath);
+//    }
+//    using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+//    {
+//        Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+//        PdfWriter.GetInstance(pdfDoc, stream);
+//        pdfDoc.Open();
+//        pdfDoc.Add(pdfTable);
+//        pdfDoc.Close();
+//        stream.Close();
+//    }
+//}
+                    doc.Close();
+                    writer.Close();
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("No hay datos para crear documento");
+            }
+            
 
-            //// Configuramos el título de las columnas de la tabla
-            //PdfPCell clNombre = new PdfPCell(new Phrase("Nombre", _standardFont));
-            //clNombre.BorderWidth = 0;
-            //clNombre.BorderWidthBottom = 0.75f;
+            
+            
+        }
 
-            //PdfPCell clStock = new PdfPCell(new Phrase("Stock", _standardFont));
-            //clStock.BorderWidth = 0;
-            //clStock.BorderWidthBottom = 0.75f;
+        private void btn_volver_Click(object sender, EventArgs e)
+        {
+            MenuAdministrarInventario inv =  new MenuAdministrarInventario();
+            inv.Show();
+            Hide();
+        }
+        //// Configuramos el título de las columnas de la tabla
+        //PdfPCell clNombre = new PdfPCell(new Phrase("Nombre", _standardFont));
+        //clNombre.BorderWidth = 0;
+        //clNombre.BorderWidthBottom = 0.75f;
 
-            //PdfPCell clCantidad = new PdfPCell(new Phrase("Cantidad Inventario", _standardFont));
-            //clPais.BorderWidth = 0;
-            //clPais.BorderWidthBottom = 0.75f;
+        //PdfPCell clStock = new PdfPCell(new Phrase("Stock", _standardFont));
+        //clStock.BorderWidth = 0;
+        //clStock.BorderWidthBottom = 0.75f;
 
-            //// Añadimos las celdas a la tabla
-            //tblPrueba.AddCell(clNombre);
-            //tblPrueba.AddCell(clApellido);
-            //tblPrueba.AddCell(clPais);
+        //PdfPCell clCantidad = new PdfPCell(new Phrase("Cantidad Inventario", _standardFont));
+        //clPais.BorderWidth = 0;
+        //clPais.BorderWidthBottom = 0.75f;
 
-            //// Llenamos la tabla con información
-            //clNombre = new PdfPCell(new Phrase("Roberto", _standardFont));
-            //clNombre.BorderWidth = 0;
+        //// Añadimos las celdas a la tabla
+        //tblPrueba.AddCell(clNombre);
+        //tblPrueba.AddCell(clApellido);
+        //tblPrueba.AddCell(clPais);
 
-            //clApellido = new PdfPCell(new Phrase("Torres", _standardFont));
-            //clApellido.BorderWidth = 0;
+        //// Llenamos la tabla con información
+        //clNombre = new PdfPCell(new Phrase("Roberto", _standardFont));
+        //clNombre.BorderWidth = 0;
 
-            //clPais = new PdfPCell(new Phrase("Puerto Rico", _standardFont));
-            //clPais.BorderWidth = 0;
+        //clApellido = new PdfPCell(new Phrase("Torres", _standardFont));
+        //clApellido.BorderWidth = 0;
 
-            //// Añadimos las celdas a la tabla
-            //tblPrueba.AddCell(clNombre);
-            //tblPrueba.AddCell(clApellido);
-            //tblPrueba.AddCell(clPais);
-            // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
+        //clPais = new PdfPCell(new Phrase("Puerto Rico", _standardFont));
+        //clPais.BorderWidth = 0;
+
+        //// Añadimos las celdas a la tabla
+        //tblPrueba.AddCell(clNombre);
+        //tblPrueba.AddCell(clApellido);
+        //tblPrueba.AddCell(clPais);
+        // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
         //    'variables
         //Dim val As New Double
         //Dim colum As String
@@ -182,15 +256,5 @@ namespace AplicacionDesktop.CRUD
         //documento.Add(par_termometro)
         //documento.Add(parrResumen)
         //documento.Add(parNotas)
-            doc.Add(tblPDF);
-
-            doc.Close();
-            writer.Close();
-        }
-
-        private void btn_volver_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

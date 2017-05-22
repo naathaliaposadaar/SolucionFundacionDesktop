@@ -45,6 +45,7 @@
             this.btn_volver.TabIndex = 7;
             this.btn_volver.Text = "Volver";
             this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // btn_pdf
             // 

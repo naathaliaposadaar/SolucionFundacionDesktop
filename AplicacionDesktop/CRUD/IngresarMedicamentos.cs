@@ -1,4 +1,4 @@
-﻿using AplicacionDesktop.CRUD;
+﻿using AplicacionDesktop.MENU;
 using Capa_DTO.Medicamento;
 using CapaNegocio.NegocioFarmacia;
 using System;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionDesktop.MENU;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace AplicacionDesktop.CRUD
         public IngresarProveedor()
         {
             InitializeComponent();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolverr_Click(object sender, EventArgs e)
+        {
+            MenuAdminProveedor men = new MenuAdminProveedor();
+            men.Show();
+            Hide();
         }
     }
 }

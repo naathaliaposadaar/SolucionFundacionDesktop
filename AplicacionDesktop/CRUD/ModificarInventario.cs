@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionDesktop.MENU;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,9 @@ namespace AplicacionDesktop.CRUD
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-
+            MenuAdministrarInventario inv = new MenuAdministrarInventario();
+            inv.Show();
+            Hide();
         }
     }
 }

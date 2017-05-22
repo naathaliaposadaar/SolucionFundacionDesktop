@@ -28,5 +28,7 @@ C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Da
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\Entidades.pdb
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\bin\Debug\itextsharp.xml
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\CapaNegocio.csprojResolveAssemblyReference.cache
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\CapaNegocio.NegocioFarmacia.ModificarProveedor.resources
+C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\CapaNegocio.csproj.GenerateResource.Cache
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.dll
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\Negocio\obj\Debug\Negocio.pdb

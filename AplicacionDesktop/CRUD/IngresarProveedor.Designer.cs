@@ -103,6 +103,7 @@
             this.btnVolverr.TabIndex = 109;
             this.btnVolverr.Text = "Volver";
             this.btnVolverr.UseVisualStyleBackColor = true;
+            this.btnVolverr.Click += new System.EventHandler(this.btnVolverr_Click);
             // 
             // label8
             // 
@@ -125,6 +126,7 @@
             this.btnIngresar.TabIndex = 107;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // lblC
             // 

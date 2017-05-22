@@ -1,5 +1,4 @@
 ﻿using AplicacionDesktop.CRUD;
-using AplicacionDesktop.CRUD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionDesktop.CRUD
+namespace AplicacionDesktop.MENU
 {
     public partial class MenuAdministrarInventario : Form
     {

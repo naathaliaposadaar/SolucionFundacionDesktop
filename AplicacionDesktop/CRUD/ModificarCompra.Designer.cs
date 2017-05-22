@@ -126,6 +126,7 @@
             this.btnVolverr.TabIndex = 127;
             this.btnVolverr.Text = "Volver";
             this.btnVolverr.UseVisualStyleBackColor = true;
+            this.btnVolverr.Click += new System.EventHandler(this.btnVolverr_Click);
             // 
             // label8
             // 

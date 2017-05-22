@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionDesktop.MENU;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace AplicacionDesktop.CRUD
         public ModificarProducto()
         {
             InitializeComponent();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuAdminProductos menu = new MenuAdminProductos();
+            menu.Show();
+            Hide();
         }
     }
 }

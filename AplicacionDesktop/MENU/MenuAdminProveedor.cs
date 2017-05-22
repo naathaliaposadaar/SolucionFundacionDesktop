@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionDesktop.CRUD
+namespace AplicacionDesktop.MENU
 {
     public partial class MenuAdminProveedor : Form
     {

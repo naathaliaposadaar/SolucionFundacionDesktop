@@ -45,6 +45,7 @@
             this.btn_volver.TabIndex = 7;
             this.btn_volver.Text = "Volver";
             this.btn_volver.UseVisualStyleBackColor = true;
+            this.btn_volver.Click += new System.EventHandler(this.btn_volver_Click);
             // 
             // btn_pdf
             // 
@@ -56,6 +57,7 @@
             this.btn_pdf.TabIndex = 6;
             this.btn_pdf.Text = "Descargar PDF";
             this.btn_pdf.UseVisualStyleBackColor = true;
+            this.btn_pdf.Click += new System.EventHandler(this.btn_pdf_Click);
             // 
             // label1
             // 

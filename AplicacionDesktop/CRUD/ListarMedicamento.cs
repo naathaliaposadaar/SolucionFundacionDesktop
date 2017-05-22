@@ -1,4 +1,4 @@
-﻿using AplicacionDesktop.CRUD;
+﻿using AplicacionDesktop.MENU;
 using CapaNegocio.NegocioFarmacia;
 using System;
 using System.Collections.Generic;

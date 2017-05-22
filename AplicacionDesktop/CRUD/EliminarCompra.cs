@@ -1,4 +1,4 @@
-﻿using AplicacionDesktop.CRUD;
+﻿using AplicacionDesktop.MENU;
 using Capa_DTO.Farmacia;
 using CapaNegocio.NegocioFarmacia;
 using System;
@@ -94,15 +94,15 @@ namespace AplicacionDesktop.CRUD
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            MenuAdminMedicamentos med = new MenuAdminMedicamentos();
-            med.Show();
+            MenuAdminCompra mCompra = new MenuAdminCompra();
+            mCompra.Show();
             Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuAdminMedicamentos med = new MenuAdminMedicamentos();
-            med.Show();
+            MenuAdminCompra mCompra = new MenuAdminCompra();
+            mCompra.Show();
             Hide();
         }
     }
