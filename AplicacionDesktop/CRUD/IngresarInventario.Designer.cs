@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(632, 347);
+            this.ClientSize = new System.Drawing.Size(634, 347);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnVolver);

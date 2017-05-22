@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRUD\EliminarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarCompra.Designer.cs">
+      <DependentUpon>EliminarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD\EliminarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,17 +85,47 @@
     <Compile Include="CRUD\EliminarMedicamento.Designer.cs">
       <DependentUpon>EliminarMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\EliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\EliminarProveedor.Designer.cs">
+      <DependentUpon>EliminarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD\EliminarSolicitudM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRUD\EliminarSolicitudM.Designer.cs">
       <DependentUpon>EliminarSolicitudM.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\IngresarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarCompra.Designer.cs">
+      <DependentUpon>IngresarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD\IngresarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRUD\IngresarInventario.Designer.cs">
       <DependentUpon>IngresarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\IngresarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarProducto.Designer.cs">
+      <DependentUpon>IngresarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\IngresarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\IngresarProveedor.Designer.cs">
+      <DependentUpon>IngresarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="CRUD\IngresarSolicitudMedicamentos.cs">
       <SubType>Form</SubType>
@@ -103,6 +139,12 @@
     <Compile Include="CRUD\IngresarMedicamentos.Designer.cs">
       <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\ListarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ListarCompras.Designer.cs">
+      <DependentUpon>ListarCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD\ListarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +157,24 @@
     <Compile Include="CRUD\ListarMedicamento.Designer.cs">
       <DependentUpon>ListarMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD\ListarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ListarProductos.Designer.cs">
+      <DependentUpon>ListarProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ListarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ListarProveedores.Designer.cs">
+      <DependentUpon>ListarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ModificarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ModificarCompra.Designer.cs">
+      <DependentUpon>ModificarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD\ModificarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +186,12 @@
     </Compile>
     <Compile Include="CRUD\ModificarMedicamento.Designer.cs">
       <DependentUpon>ModificarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD\ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD\ModificarProducto.Designer.cs">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="MENU\MenuAdminCompra.cs">
       <SubType>Form</SubType>
@@ -183,17 +249,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRUD\EliminarCompra.resx">
+      <DependentUpon>EliminarCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\EliminarInventario.resx">
       <DependentUpon>EliminarInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\EliminarMedicamento.resx">
       <DependentUpon>EliminarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\EliminarProveedor.resx">
+      <DependentUpon>EliminarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\EliminarSolicitudM.resx">
       <DependentUpon>EliminarSolicitudM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarCompra.resx">
+      <DependentUpon>IngresarCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\IngresarInventario.resx">
       <DependentUpon>IngresarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarProducto.resx">
+      <DependentUpon>IngresarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\IngresarProveedor.resx">
+      <DependentUpon>IngresarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\IngresarSolicitudMedicamentos.resx">
       <DependentUpon>IngresarSolicitudMedicamentos.cs</DependentUpon>
@@ -201,17 +285,32 @@
     <EmbeddedResource Include="CRUD\IngresarMedicamentos.resx">
       <DependentUpon>IngresarMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ListarCompras.resx">
+      <DependentUpon>ListarCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ListarInventario.resx">
       <DependentUpon>ListarInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ListarMedicamento.resx">
       <DependentUpon>ListarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ListarProductos.resx">
+      <DependentUpon>ListarProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ListarProveedores.resx">
+      <DependentUpon>ListarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ModificarCompra.resx">
+      <DependentUpon>ModificarCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ModificarInventario.resx">
       <DependentUpon>ModificarInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD\ModificarMedicamento.resx">
       <DependentUpon>ModificarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD\ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MENU\MenuGenerarReportesG.resx">
       <DependentUpon>MenuGenerarReportesG.cs</DependentUpon>

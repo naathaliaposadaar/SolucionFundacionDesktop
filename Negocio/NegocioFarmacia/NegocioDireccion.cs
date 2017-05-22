@@ -55,7 +55,7 @@ namespace CapaNegocio.NegocioFarmacia
 
             configuraConexion();
             conectar.CadenaSQL = String.Format("INSERT INTO {0}(id_direccion, calle, comuna, cuidad,region,codigopostal) VALUES({1},'{2}','{3}','{4}','{5}',{6})",
-                                                   conectar.NombreTabla, Seq_direccion,direccion.Calle,direccion.Comuna,direccion.Cuidad,direccion.Region,direccion.CodigoPostal);
+                                                   conectar.NombreTabla, Seq_direccion,direccion.Calle,direccion.Comuna,direccion.Ciudad,direccion.Region,direccion.CodigoPostal);
 
 
             conectar.EsSelect = false;
@@ -87,7 +87,7 @@ namespace CapaNegocio.NegocioFarmacia
                                                         + " region='{3}',"
                                                         + " codigopostal={4}"
                                                         + " WHERE id_reccion ={5}"
-                                                        , direc.Calle,direc.Comuna,direc.Cuidad,direc.Region,direc.CodigoPostal,direc.Id_direccion);
+                                                        , direc.Calle,direc.Comuna,direc.Ciudad,direc.Region,direc.CodigoPostal,direc.Id_direccion);
             this.conectar.EsSelect = false;
             return this.conectar.conecta();
         }
@@ -148,7 +148,7 @@ namespace CapaNegocio.NegocioFarmacia
                         auxDireccion.Id_direccion = int.Parse(dt.Rows[0]["id_direccion"].ToString());
                         auxDireccion.Calle = dt.Rows[0]["calle"].ToString();
                         auxDireccion.Comuna = dt.Rows[0]["comuna"].ToString();
-                        auxDireccion.Cuidad = dt.Rows[0]["ciudad"].ToString();
+                        auxDireccion.Ciudad = dt.Rows[0]["ciudad"].ToString();
                         auxDireccion.Region = dt.Rows[0]["region"].ToString();
                         auxDireccion.CodigoPostal = int.Parse(dt.Rows[0]["codigopostal"].ToString());
                         
@@ -158,7 +158,7 @@ namespace CapaNegocio.NegocioFarmacia
                         auxDireccion.Id_direccion = 0;
                         auxDireccion.Calle = "";
                         auxDireccion.Comuna = "";
-                        auxDireccion.Cuidad = "";
+                        auxDireccion.Ciudad = "";
                         auxDireccion.Region = "";
                         auxDireccion.CodigoPostal = 0;
                     }

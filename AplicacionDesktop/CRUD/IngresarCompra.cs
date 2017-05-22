@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AplicacionDesktop.MENU
+namespace AplicacionDesktop.CRUD
 {
-    public partial class ModificarInventario : Form
+    public partial class IngresarCompra : Form
     {
-        public ModificarInventario()
+        public IngresarCompra()
         {
             InitializeComponent();
         }
 
-        private void btnMod_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void txtTotal_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

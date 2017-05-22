@@ -13,7 +13,7 @@ namespace Capa_DTO.Farmacia
         private int id_direccion;
         private string calle;
         private string comuna;
-        private string cuidad;
+        private string ciudad;
         private string region;
         private int codigopostal;
 
@@ -31,10 +31,10 @@ namespace Capa_DTO.Farmacia
         }
         
 
-        public string Cuidad
+        public string Ciudad
         {
-            get { return cuidad; }
-            set { cuidad = value; }
+            get { return ciudad; }
+            set { ciudad = value; }
         }
         
 
