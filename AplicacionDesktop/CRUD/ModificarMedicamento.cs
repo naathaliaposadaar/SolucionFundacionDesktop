@@ -40,6 +40,7 @@ namespace AplicacionDesktop.CRUD
             }
             else
             {
+               
                 focusComponente(campo);
                 return false;
             }
