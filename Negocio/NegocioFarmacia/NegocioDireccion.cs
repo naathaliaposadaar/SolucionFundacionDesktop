@@ -83,7 +83,7 @@ namespace CapaNegocio.NegocioFarmacia
             this.configuraConexion();
             this.conectar.CadenaSQL = String.Format("UPDATE direccion SET calle='{0}',"
                                                         + " comuna ='{1}',"
-                                                        + " cuidad='{2}',"
+                                                        + " ciudad='{2}',"
                                                         + " region='{3}',"
                                                         + " codigopostal={4}"
                                                         + " WHERE id_reccion ={5}"

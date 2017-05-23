@@ -184,3 +184,6 @@ C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\AplicacionDesktop\ob
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\AplicacionDesktop\obj\Debug\AplicacionDesktop.csproj.GenerateResource.Cache
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\AplicacionDesktop\obj\Debug\AplicacionDesktop.exe
 C:\Users\nathalia\Documents\GitHub\SolucionFundacionDesktop\AplicacionDesktop\obj\Debug\AplicacionDesktop.pdb
+C:\Users\Francisco\Desktop\GitAplicacion\SolucionFundacionDesktop\AplicacionDesktop\bin\Debug\AplicacionDesktop.exe.config
+C:\Users\Francisco\Desktop\GitAplicacion\SolucionFundacionDesktop\AplicacionDesktop\obj\Debug\AplicacionDesktop.exe
+C:\Users\Francisco\Desktop\GitAplicacion\SolucionFundacionDesktop\AplicacionDesktop\obj\Debug\AplicacionDesktop.pdb
